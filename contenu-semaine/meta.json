@@ -1,0 +1,7 @@
+{
+  "id": "semaine-01",
+  "titre": "Titre de la séance",
+  "theme": "Thème de la séance",
+  "duree": "10 min",
+  "description": "Courte description affichée sous le titre dans l'application."
+}
