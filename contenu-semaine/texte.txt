@@ -1,3 +1,12 @@
-Installez-vous confortablement, dans une position stable et détendue. Fermez les yeux si cela vous convient.
-
-Remplacez ce texte par le texte complet de la méditation guidée de la semaine. C'est ce texte qui sera lu à voix haute par l'API ElevenLabs pour générer le fichier audio.
+Installe-toi. Assis, dos droit, sans rigidité. Ferme les yeux si c'est confortable pour toi.
+Prends trois respirations, sans les forcer. Laisse simplement l'air entrer, et sortir.
+Pense à un moment récent où tu as gagné quelque chose. Une reconnaissance, un contrat, une attention, peu importe la taille. Ne raconte pas encore l'histoire. Reviens juste à l'instant précis où tu l'as su.
+Qu'est-ce qui s'est passé dans ton corps, à cet instant précis. Une chaleur. Une ouverture. Peut-être une envie de le garder, de le refaire, de ne pas le perdre.
+Reste là. Ne juge pas ce que tu trouves. Observe seulement.
+Maintenant, pense à un moment récent où tu as perdu quelque chose. Une occasion, une estime, un lien. Encore une fois, ne raconte pas l'histoire. Reviens à l'instant où tu l'as su.
+Qu'est-ce qui s'est passé dans ton corps, cette fois. Un froid, peut-être. Un serrement dans la poitrine ou la gorge. Une envie de comprendre, de réparer, de refuser que ce soit vrai.
+Reste là aussi. Sans juger.
+Maintenant, regarde les deux sensations, côte à côte. Le gain qui ouvre. La perte qui referme. Ce sont deux mouvements du même mécanisme. Ce n'est pas le gain ou la perte qui posent problème. C'est la main qui se referme dessus, dans un cas comme dans l'autre.
+Il existe un espace, minuscule, entre la sensation et l'histoire que tu commences à raconter dessus. C'est dans cet espace que tout se joue. Avant l'étiquette bonne nouvelle ou mauvaise nouvelle. Juste la sensation, nue.
+Reste dans cet espace, encore quelques respirations. Tu n'as rien à résoudre. Juste à voir.
+Quand tu es prêt, reviens à la pièce, aux sons autour de toi. Ouvre les yeux.

@@ -7,6 +7,14 @@
       "duree": "1 min",
       "audio": "audio/test.mp3",
       "description": "Séance provisoire pour valider l'application."
+    },
+    {
+      "id": "semaine-gain-perte",
+      "titre": "Gain et perte",
+      "theme": "Détecter la saisie dans le gain et la perte",
+      "duree": "15 min",
+      "audio": "audio/semaine-gain-perte.mp3",
+      "description": "Observer, dans une situation récente, le moment où gagner ou perdre quelque chose a fait naître la saisie, avant l'histoire mentale qui suit."
     }
   ]
 }

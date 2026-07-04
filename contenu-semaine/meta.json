@@ -1,7 +1,7 @@
 {
-  "id": "semaine-01",
-  "titre": "Titre de la séance",
-  "theme": "Thème de la séance",
-  "duree": "10 min",
-  "description": "Courte description affichée sous le titre dans l'application."
+  "id": "semaine-gain-perte",
+  "titre": "Gain et perte",
+  "theme": "Détecter la saisie dans le gain et la perte",
+  "duree": "15 min",
+  "description": "Observer, dans une situation récente, le moment où gagner ou perdre quelque chose a fait naître la saisie, avant l'histoire mentale qui suit."
 }
