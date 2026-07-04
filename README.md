@@ -14,3 +14,19 @@ Chaque semaine :
 3. Lancez : `python3 generer-audio.py`
 
 Le script génère l'audio, met à jour `content/sessions.json`, puis commit et pousse sur GitHub automatiquement.
+
+### Ajouter des silences dans le texte
+
+Par défaut, le texte s'enchaîne sans pause. Pour insérer un vrai silence à un endroit précis (par exemple pour laisser le temps de se recentrer), écrivez `[pause N]` sur sa propre ligne, où `N` est le nombre de secondes :
+
+```
+Une phrase de l'instruction.
+[pause 10]
+La phrase suivante, après 10 secondes de silence.
+```
+
+Vous pouvez utiliser n'importe quel nombre de secondes (entier ou décimal, ex. `[pause 2.5]`).
+
+### Changer la voix
+
+Le script utilise par défaut une voix "Antoni". Pour en utiliser une autre : allez dans votre compte ElevenLabs → Voice Library, choisissez une voix, copiez son Voice ID, puis ajoutez (ou modifiez) dans `.env` la ligne `ELEVENLABS_VOICE_ID=xxxxx`.

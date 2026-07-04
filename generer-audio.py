@@ -18,6 +18,7 @@
 
 import json
 import os
+import re
 import subprocess
 import sys
 import urllib.error
@@ -69,18 +70,34 @@ def lire_texte():
 
 
 def ajouter_pauses(texte):
-    """Transforme les retours à la ligne du fichier texte.txt en pauses respirées.
+    """Transforme les marqueurs [pause N] écrits dans texte.txt en vrais silences de N secondes.
 
-    Sans cela, ElevenLabs enchaîne toutes les phrases sans s'arrêter.
-    Convention utilisée ici :
-    - une ligne vide (paragraphe) devient une pause longue (3 secondes)
-    - un simple retour à la ligne devient une pause courte (1,5 seconde)
-    Vous n'avez rien de spécial à écrire : gardez juste une instruction par ligne,
-    et une ligne vide quand vous voulez une pause plus longue."""
-    # On traite d'abord les paragraphes (lignes vides), puis les lignes simples,
-    # sinon la pause longue serait immédiatement écrasée par la pause courte
-    texte = texte.replace("\n\n", ' <break time="3.0s" /> ')
-    texte = texte.replace("\n", ' <break time="1.5s" /> ')
+    Exemple à écrire dans contenu-semaine/texte.txt :
+        Une phrase de l'instruction.
+        [pause 10]
+        La phrase suivante, après 10 secondes de silence.
+
+    ElevenLabs limite chaque balise de pause à 3 secondes (au-delà, la voix
+    devient instable) : pour une pause de 10 secondes, on enchaîne donc
+    plusieurs balises de 3 secondes maximum jusqu'à atteindre le total demandé.
+    En dehors de ces marqueurs, le texte s'enchaîne normalement : c'est vous
+    qui décidez où et combien de temps durent les silences."""
+
+    def remplacer_par_balises(correspondance):
+        secondes_restantes = float(correspondance.group(1))
+        balises = []
+        while secondes_restantes > 0:
+            duree = min(secondes_restantes, 3.0)
+            balises.append('<break time="{:.1f}s" />'.format(duree))
+            secondes_restantes -= duree
+        return " " + "".join(balises) + " "
+
+    texte = re.sub(r"\[pause\s+([0-9]+(?:\.[0-9]+)?)\]", remplacer_par_balises, texte)
+
+    # Les retours à la ligne restants (qui ne sont pas des [pause N]) sont
+    # remplacés par un simple espace : ils ne créent pas de silence imposé
+    texte = texte.replace("\n", " ")
+
     return texte
 
 
