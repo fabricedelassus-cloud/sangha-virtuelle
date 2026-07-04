@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "id": "test",
+      "titre": "Séance de test",
+      "theme": "Vérifier que tout fonctionne",
+      "duree": "1 min",
+      "audio": "audio/test.mp3",
+      "description": "Séance provisoire pour valider l'application."
+    }
+  ]
+}

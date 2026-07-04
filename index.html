@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangha Virtuelle - Méditations guidées</title>
+  <!-- On relie notre feuille de style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="conteneur">
+
+    <header class="entete">
+      <h1>Sangha Virtuelle</h1>
+      <p class="sous-titre">Un espace de méditation guidée</p>
+    </header>
+
+    <!-- VUE 1 : le menu qui liste les séances disponibles -->
+    <!-- Cette liste est vide au départ, elle sera remplie par app.js -->
+    <main id="vue-menu" class="vue">
+      <h2>Séances disponibles</h2>
+      <ul id="liste-seances" class="liste-seances">
+        <!-- Les séances seront ajoutées ici automatiquement par le JavaScript -->
+      </ul>
+    </main>
+
+    <!-- VUE 2 : le lecteur, caché au départ, affiché quand on choisit une séance -->
+    <section id="vue-lecteur" class="vue cachee">
+      <button id="bouton-retour" class="bouton-retour" type="button">&larr; Retour au menu</button>
+
+      <h2 id="lecteur-titre">Titre de la séance</h2>
+      <p id="lecteur-theme" class="lecteur-theme">Thème de la séance</p>
+      <p id="lecteur-description" class="lecteur-description"></p>
+
+      <!-- L'élément audio réel, caché : on pilote la lecture avec nos propres boutons -->
+      <audio id="lecteur-audio"></audio>
+
+      <!-- Message affiché si le fichier audio n'existe pas encore -->
+      <p id="lecteur-message" class="lecteur-message cachee">Audio à venir</p>
+
+      <div class="controles">
+        <button id="bouton-lecture" class="bouton-lecture" type="button">Lecture</button>
+
+        <!-- Barre de progression : on utilise un input de type range -->
+        <input id="barre-progression" class="barre-progression" type="range" min="0" max="100" value="0" />
+
+        <span id="temps-ecoule" class="temps">0:00</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- On charge notre script à la fin pour que la page soit prête avant -->
+  <script src="app.js"></script>
+</body>
+</html>

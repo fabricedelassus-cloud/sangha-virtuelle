@@ -1,0 +1,177 @@
+/* ===================================================== */
+/* Style général : sobre et apaisant, pour la méditation  */
+/* ===================================================== */
+
+/* On réinitialise les marges par défaut du navigateur */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Fond sombre doux plutôt que noir pur, plus reposant pour les yeux */
+  background-color: #1b2027;
+  color: #e8e6e1;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  /* On centre tout le contenu verticalement et horizontalement */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: 560px;
+}
+
+.entete {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.entete h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: #f4f1ea;
+}
+
+.sous-titre {
+  color: #9aa4b2;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* ===================================================== */
+/* Vues (menu et lecteur)                                 */
+/* ===================================================== */
+
+.vue h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #cfd4dc;
+  text-align: center;
+}
+
+/* Classe utilisée pour cacher une vue */
+.cachee {
+  display: none;
+}
+
+/* ===================================================== */
+/* Liste des séances                                       */
+/* ===================================================== */
+
+.liste-seances {
+  list-style: none;
+}
+
+.seance-item {
+  background-color: #242b35;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.seance-item:hover {
+  background-color: #2c3542;
+}
+
+.seance-titre {
+  font-size: 1.05rem;
+  color: #f4f1ea;
+  margin-bottom: 4px;
+}
+
+.seance-meta {
+  font-size: 0.85rem;
+  color: #8b95a3;
+}
+
+/* ===================================================== */
+/* Lecteur                                                 */
+/* ===================================================== */
+
+#vue-lecteur {
+  background-color: #242b35;
+  border-radius: 14px;
+  padding: 30px 26px;
+  text-align: center;
+}
+
+.bouton-retour {
+  background: none;
+  border: none;
+  color: #8b95a3;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.bouton-retour:hover {
+  color: #e8e6e1;
+}
+
+#lecteur-titre {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #f4f1ea;
+  margin-bottom: 6px;
+}
+
+.lecteur-theme {
+  color: #9aa4b2;
+  margin-bottom: 16px;
+}
+
+.lecteur-description {
+  color: #b7bfc9;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.lecteur-message {
+  color: #c9a86a;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.controles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.bouton-lecture {
+  background-color: #4a6274;
+  color: #f4f1ea;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bouton-lecture:hover {
+  background-color: #566f83;
+}
+
+.barre-progression {
+  width: 100%;
+  accent-color: #4a6274;
+}
+
+.temps {
+  font-size: 0.85rem;
+  color: #8b95a3;
+}
