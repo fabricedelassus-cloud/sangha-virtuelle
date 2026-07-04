@@ -68,6 +68,22 @@ def lire_texte():
         return fichier.read().strip()
 
 
+def ajouter_pauses(texte):
+    """Transforme les retours à la ligne du fichier texte.txt en pauses respirées.
+
+    Sans cela, ElevenLabs enchaîne toutes les phrases sans s'arrêter.
+    Convention utilisée ici :
+    - une ligne vide (paragraphe) devient une pause longue (3 secondes)
+    - un simple retour à la ligne devient une pause courte (1,5 seconde)
+    Vous n'avez rien de spécial à écrire : gardez juste une instruction par ligne,
+    et une ligne vide quand vous voulez une pause plus longue."""
+    # On traite d'abord les paragraphes (lignes vides), puis les lignes simples,
+    # sinon la pause longue serait immédiatement écrasée par la pause courte
+    texte = texte.replace("\n\n", ' <break time="3.0s" /> ')
+    texte = texte.replace("\n", ' <break time="1.5s" /> ')
+    return texte
+
+
 def generer_audio(texte, cle_api, voice_id):
     """Envoie le texte à l'API ElevenLabs et renvoie les octets du fichier audio (mp3)."""
     url = "https://api.elevenlabs.io/v1/text-to-speech/" + voice_id
@@ -165,6 +181,8 @@ def main():
         print("Fichier manquant :", erreur)
         print("Vérifiez que contenu-semaine/meta.json et contenu-semaine/texte.txt existent bien.")
         sys.exit(1)
+
+    texte = ajouter_pauses(texte)
 
     print("Génération de l'audio pour la séance : " + meta["titre"] + " ...")
 
